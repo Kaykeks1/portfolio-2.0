@@ -1,0 +1,15 @@
+.header {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.link {
+  color: #A7A7A7;
+  font-size: 20px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
