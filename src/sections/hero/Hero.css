@@ -1,0 +1,33 @@
+.hero {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  height: 90%;
+  display: flex;
+  padding-top: 15%;
+}
+
+.intro {
+  color: #D9D9D9;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -1px;
+  max-width: 60%;
+  height: 349px;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro > .my-name {
+  color: #862121;
+}
+
+.image {
+  width: 349px;
+  height: 349px;
+  border: 10px solid #862121;
+  border-radius: 50%;
+  /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
+}

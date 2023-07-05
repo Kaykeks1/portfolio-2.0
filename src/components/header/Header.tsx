@@ -6,9 +6,9 @@ export default function Header() {
     <div className='header'>
       {
         links.map((link) =>
-          (<span className='link'>
+          (<a className='link' href="#">
             {link}
-          </span>)
+          </a>)
           )
       }
     </div>
