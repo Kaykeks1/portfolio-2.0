@@ -12,12 +12,10 @@ export default function Hero() {
             Fawaz Kekere-Ekun
           </span>
         <span>
-          I build things for web.
+          I build things for the web.
           </span>
       </div>
-      <div className='image'>
-
-      </div>
+      <div className='image' />
     </div>
   )
 }
