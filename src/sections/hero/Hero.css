@@ -18,9 +18,14 @@
   height: 349px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  }
+
+.animate-intro {
+  animation: introAnimation 2s;
 }
 
-.intro > .my-name {
+.intro > div > .my-name {
   color: #862121;
 }
 
@@ -29,5 +34,41 @@
   height: 349px;
   border: 10px solid #862121;
   border-radius: 50%;
-  /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
+  background: url("../../images/me_1.jpeg");
+  background-position: 	-30px -100px;
+  background-size: cover;
+}
+
+.remove-opacity {
+  opacity: 0;
+}
+
+.add-opacity {
+  opacity: 1;
+}
+
+.animate-image {
+  animation: imageAnimation 2s;
+}
+
+@keyframes introAnimation {
+  from {
+    margin-left: -500px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes imageAnimation {
+  from {
+    margin-right: -500px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0px;
+    opacity: 1;
+  }
 }

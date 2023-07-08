@@ -1,16 +1,28 @@
 import './App.css';
 import Header from './components/header/Header';
+import SplashScreen from './components/splash-screen/SplashScreen';
 import Hero from './sections/hero/Hero';
-import Stack from './sections/stacks/Stack';
+import Stacks from './sections/stacks/Stacks';
+import Projects from './sections/projects/Projects';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
   return (
-    <div className="App">
+    loading
+    ? <SplashScreen />
+    : <div className="App">
       <div className='hero-section'>
         <Header />
         <Hero />
       </div>
-      <Stack />
+      <Stacks />
+      <Projects />
     </div>
   );
 }
