@@ -6,12 +6,10 @@ export default function Hero() {
     const stacksSection = document.getElementById('stacks') as HTMLElement;
     const introSection = document.getElementById('intro') as HTMLElement;
     const imageSection = document.getElementById('image') as HTMLElement;
-    var rect = heroSection.getBoundingClientRect();
   
     const fullHero = isElementInViewport(heroSection)
     const outHero = isElementCompletelyOutOfViewport(heroSection)
     const fullStacks = isElementInViewport(stacksSection)
-    console.log({fullHero, fullStacks, outHero})
 
     if (fullHero) {
       // add opacity
