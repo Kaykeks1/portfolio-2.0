@@ -16,7 +16,8 @@
 }
 
 .subtitle {
-  color: var(--light-content, #A7A7A7);
+  /* color: var(--light-content, #A7A7A7); */
+  color: #A7A7A7;
   text-align: center;
   font-size: 32px;
   font-style: normal;
@@ -110,4 +111,10 @@
   margin-right: 6px;
   color: rgb(255, 255, 255);
   font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .project-list {
+    column-count: 1;
+  }
 }
