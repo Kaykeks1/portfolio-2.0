@@ -1,5 +1,7 @@
 import './App.css';
 import Header from './components/header/Header';
+import Hamburger from './components/hamburger/Hamburger';
+import GoToNext from './components/goto-next/GoToNext';
 import SplashScreen from './components/splash-screen/SplashScreen';
 import Hero from './sections/hero/Hero';
 import Stacks from './sections/stacks/Stacks';
@@ -18,13 +20,12 @@ function App() {
   return (
     loading
     ? <SplashScreen />
-    : <div className="App">
-      <div className='hero-section'>
-        <Header />
-        <Hero />
-      </div>
-      <Stacks />
+    : <div className="app">
+      <Hamburger />
+      <GoToNext />
+      <Hero />
       <About />
+      <Stacks />
       <Projects />
       <Contact />
     </div>
