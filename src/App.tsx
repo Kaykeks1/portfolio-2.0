@@ -4,6 +4,8 @@ import SplashScreen from './components/splash-screen/SplashScreen';
 import Hero from './sections/hero/Hero';
 import Stacks from './sections/stacks/Stacks';
 import Projects from './sections/projects/Projects';
+import About from './sections/about/About';
+import Contact from './sections/contact/Contact';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
         <Hero />
       </div>
       <Stacks />
+      <About />
       <Projects />
+      <Contact />
     </div>
   );
 }
