@@ -7,11 +7,10 @@ export default function Hero() {
     const introSection = document.getElementById('intro') as HTMLElement;
     const imageSection = document.getElementById('image') as HTMLElement;
   
-    const fullHero = isElementInViewport(heroSection)
+    const partiallyInHero = isElementPartiallyInViewport(heroSection)
     const outHero = isElementCompletelyOutOfViewport(heroSection)
-    const fullStacks = isElementInViewport(stacksSection)
 
-    if (fullHero) {
+    if (partiallyInHero) {
       // add opacity
       introSection.classList.remove("remove-opacity");
       introSection.classList.add("add-opacity");
@@ -24,7 +23,7 @@ export default function Hero() {
       // animate
       introSection.classList.remove("animate-intro");
     }
-    if (fullHero) {
+    if (partiallyInHero) {
       // add opacity
       imageSection.classList.remove("remove-opacity");
       imageSection.classList.add("add-opacity");
@@ -39,13 +38,10 @@ export default function Hero() {
     }
   });
   
-  function isElementInViewport(element: HTMLElement) {
+  function isElementPartiallyInViewport(element: HTMLElement) {
     var rect = element.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.bottom > 0
     );
   }
 
@@ -58,7 +54,7 @@ export default function Hero() {
   }
   
   return (
-    <div className="hero" id="hero">
+    <section className="hero" id="hero">
       <div className='intro animate-intro' id="intro">
         Hi 👋,<br />
         <div>
@@ -69,6 +65,6 @@ export default function Hero() {
         </span>
       </div>
       <div className='image animate-image' id="image" />
-    </div>
+    </section>
   )
 }
