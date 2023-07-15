@@ -1,6 +1,10 @@
 import "./Contact.css"
 
-export default function Contact() {
+type Props = {
+  id: string
+}
+
+export default function Contact({ id }: Props) {
   return (
     <section className='container' id="contact">
       <h1 className='title'>Contact</h1>

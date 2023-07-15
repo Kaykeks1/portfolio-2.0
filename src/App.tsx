@@ -1,5 +1,4 @@
 import './App.css';
-import Header from './components/header/Header';
 import Hamburger from './components/hamburger/Hamburger';
 import GoToNext from './components/goto-next/GoToNext';
 import SplashScreen from './components/splash-screen/SplashScreen';
@@ -11,23 +10,55 @@ import Contact from './sections/contact/Contact';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [ goto, setGoTo ] = useState('#about');
+  const sections = ['#about', '#stacks', '#projects', '#contact']
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
     }, 2000)
   }, [])
+
+  document.addEventListener("scroll", function() {
+    const heroSection = document.getElementById('hero') as HTMLElement;
+    const aboutSection = document.getElementById('about') as HTMLElement;
+    const stacksSection = document.getElementById('stacks') as HTMLElement;
+    const projectsSection = document.getElementById('projects') as HTMLElement;
+
+    if (isElementPartiallyInViewport(heroSection)) {
+      setGoTo('#about')
+    } else if (isElementPartiallyInViewport(aboutSection)) {
+      setGoTo('#stacks')
+    } else if (isElementPartiallyInViewport(stacksSection)) {
+      setGoTo('#projects')
+    } else if (isElementPartiallyInViewport(projectsSection)) {
+      setGoTo('#contact')
+    } else {
+      setGoTo('')
+    }
+  });
+
+  function isElementPartiallyInViewport(element: HTMLElement) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.bottom > 0
+    );
+  }
+
   return (
     loading
     ? <SplashScreen />
     : <div className="app">
       <Hamburger />
-      <GoToNext />
-      <Hero />
-      <About />
-      <Stacks />
-      <Projects />
-      <Contact />
+      {
+        goto && <GoToNext goto={goto} />
+      }
+      <Hero id="hero" />
+      <About id="about" />
+      <Stacks id="stacks" />
+      <Projects id="projects" />
+      <Contact id="contact" />
     </div>
   );
 }

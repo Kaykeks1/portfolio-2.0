@@ -12,7 +12,11 @@ import { ReactComponent as VueLogo } from '../../images/svgs/vue.svg';
 import { ReactComponent as NestJSLogo } from '../../images/svgs/nest.svg';
 import { ReactComponent as PythonLogo } from '../../images/svgs/python.svg';
 
-export default function Stacks() {
+type Props = {
+  id: string
+}
+
+export default function Stacks({ id }: Props) {
   const stacks = [HTMLLogo, CSSLogo, JSLogo, ReactLogo, TailwindLogo, SASSLogo, GitLogo, VSCodeLogo, GithubLogo, VueLogo, NestJSLogo, PythonLogo]
   return (
     <section id="stacks" className='container'>

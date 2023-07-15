@@ -1,7 +1,11 @@
 import './Projects.css';
 import backgroundImage from "../../images/me_1.jpeg";
 
-export default function Projects() {
+type Props = {
+  id: string
+}
+
+export default function Projects({ id }: Props) {
   return (
     <section className='container' id="projects">
       <h1 className='title'>Projects</h1>

@@ -1,9 +1,12 @@
 import './Hero.css';
 
-export default function Hero() {
+type Props = {
+  id: string
+}
+
+export default function Hero({ id }: Props) {
   document.addEventListener("scroll", function() {
     const heroSection = document.getElementById('hero') as HTMLElement;
-    const stacksSection = document.getElementById('stacks') as HTMLElement;
     const introSection = document.getElementById('intro') as HTMLElement;
     const imageSection = document.getElementById('image') as HTMLElement;
   
@@ -54,7 +57,7 @@ export default function Hero() {
   }
   
   return (
-    <section className="hero" id="hero">
+    <section className="hero" id={id}>
       <div className='intro animate-intro' id="intro">
         Hi 👋,<br />
         <div>
