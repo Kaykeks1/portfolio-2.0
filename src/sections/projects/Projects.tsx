@@ -12,7 +12,7 @@ export default function Projects({ id }: Props) {
       <h3 className='subtitle'>Things I've built so far</h3>
       <div className='project-list'>
         {
-          [1,2,3,4,5,6,7].map((_, k) => <div className='project-item' style={{ backgroundImage: `url(${backgroundImage})` }}>
+          [1,2,3,4,5,6,7].map((_, k) => <div className='project-item' style={{ backgroundImage: `url(${backgroundImage})` }} key={k}>
             <div className='project-item-overlay' key={k}>
               <div>
                 <h3 className='project-title'>LMS</h3>

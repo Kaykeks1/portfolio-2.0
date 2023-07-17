@@ -41,8 +41,10 @@ function App() {
 
   function isElementPartiallyInViewport(element: HTMLElement) {
     var rect = element.getBoundingClientRect();
+    const midPoint = rect.height / 2;
     return (
       rect.bottom > 0
+      && rect.bottom > midPoint
     );
   }
 
@@ -55,7 +57,7 @@ function App() {
         goto && <GoToNext goto={goto} />
       }
       <Hero id="hero" />
-      <About id="about" />
+      <About id="about" onView={goto !== '#about'} />
       <Stacks id="stacks" />
       <Projects id="projects" />
       <Contact id="contact" />
