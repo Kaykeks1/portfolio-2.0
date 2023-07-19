@@ -2,6 +2,7 @@
   position: absolute;
   right: 60px;
   top: 40px;
+  z-index: 3;
 }
 
 .hamburger {
@@ -36,6 +37,7 @@
 .open {
   transform: rotate(90deg);
   transform: translateY(0px);
+  position: fixed;
 }
 
 .open .hamburger-top {

@@ -5,6 +5,10 @@ export default function Hamburger() {
   const showNavigation = () => {
     const hamburger = document.getElementById('menu-btn') as HTMLElement;
     hamburger.classList.toggle('open');
+    const menu = document.getElementById('menu') as HTMLElement;
+    menu.classList.toggle('open-menu');
+    let overlayShadow = document.getElementById("overlay") as HTMLElement;
+    overlayShadow.style.display = overlayShadow.style.display === "block" ? "none" : "block";
   }
   return (
     <div className='hamburger-container' id="menu-btn" onClick={showNavigation}>

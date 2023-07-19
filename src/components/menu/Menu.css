@@ -1,0 +1,85 @@
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 0%;
+  background-color: black;
+  color: #D9D9D9;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 100px 0px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.open-menu {
+  width: 40%;
+  z-index: 2;
+  padding: 100px;
+}
+
+.menu ul {
+  display: none;
+}
+
+.menu .info-links {
+  display: none;
+}
+
+.menu .info-link {
+  display: none;
+}
+
+.open-menu ul {
+  display: block;
+}
+
+.open-menu .info-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.open-menu .info-link {
+  height: fit-content;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.open-menu .info-link > svg > path {
+  fill: white;
+}
+
+.open-menu .info-link > svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.open-menu .info-link > span {
+  font-size: 0px;
+  transition: font-size 0.5s ease-in-out;
+  position: absolute;
+  left: 25%;
+  bottom: -40px;
+}
+
+.open-menu .info-link > svg > path {
+  transition: fill 0.5s ease-in-out;
+}
+
+.open-menu .info-link:hover svg > path {
+  fill: #843939;
+}
+
+.open-menu .info-link:hover span {
+  font-size: 15px;
+}

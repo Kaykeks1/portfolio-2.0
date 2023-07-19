@@ -1,6 +1,7 @@
 import './App.css';
 import Hamburger from './components/hamburger/Hamburger';
 import GoToNext from './components/goto-next/GoToNext';
+import Menu from './components/menu/Menu';
 import SplashScreen from './components/splash-screen/SplashScreen';
 import Hero from './sections/hero/Hero';
 import Stacks from './sections/stacks/Stacks';
@@ -48,6 +49,8 @@ function App() {
     );
   }
 
+  const onClickPageBody = () => {} 
+
   return (
     loading
     ? <SplashScreen />
@@ -61,6 +64,8 @@ function App() {
       <Stacks id="stacks" />
       <Projects id="projects" />
       <Contact id="contact" />
+      <Menu id="menu" />
+      <div id="overlay" onClick={onClickPageBody} />
     </div>
   );
 }
