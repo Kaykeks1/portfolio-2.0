@@ -15,11 +15,9 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [ goto, setGoTo ] = useState('#about');
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-  }, [])
+  const finishedLoading = ()=>{
+    setLoading(false)
+  }
 
   document.addEventListener("scroll", function() {
     const heroSection = document.getElementById('hero') as HTMLElement;
@@ -46,7 +44,7 @@ function App() {
 
   return (
     loading
-    ? <SplashScreen />
+    ? <SplashScreen finishedLoading={finishedLoading} />
     : <div className="app">
       <Hamburger />
       {

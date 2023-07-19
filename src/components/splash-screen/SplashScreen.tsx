@@ -1,7 +1,12 @@
 import { useEffect } from 'react';
 import './SplashScreen.css';
+import { type } from 'os';
 
-export default function SplashScreen() {
+type Props = {
+  finishedLoading: Function
+}
+
+export default function SplashScreen({ finishedLoading }: Props) {
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   
@@ -31,6 +36,7 @@ export default function SplashScreen() {
       
       if(iteration >= h1DataValue.length){ 
         clearInterval(interval);
+        finishedLoading();
       }
       
       iteration += 1 / 5;
