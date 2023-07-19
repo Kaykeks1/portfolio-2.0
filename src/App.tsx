@@ -9,11 +9,11 @@ import Projects from './sections/projects/Projects';
 import About from './sections/about/About';
 import Contact from './sections/contact/Contact';
 import { useEffect, useState } from 'react';
+import appDomManipulations from './helpers/appDomManipulations'
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [ goto, setGoTo ] = useState('#about');
-  const sections = ['#about', '#stacks', '#projects', '#contact']
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,29 +27,22 @@ function App() {
     const stacksSection = document.getElementById('stacks') as HTMLElement;
     const projectsSection = document.getElementById('projects') as HTMLElement;
 
-    if (isElementPartiallyInViewport(heroSection)) {
+    if (appDomManipulations.isMoreThanHalfOfTheElementInViewport(heroSection)) {
       setGoTo('#about')
-    } else if (isElementPartiallyInViewport(aboutSection)) {
+    } else if (appDomManipulations.isMoreThanHalfOfTheElementInViewport(aboutSection)) {
       setGoTo('#stacks')
-    } else if (isElementPartiallyInViewport(stacksSection)) {
+    } else if (appDomManipulations.isMoreThanHalfOfTheElementInViewport(stacksSection)) {
       setGoTo('#projects')
-    } else if (isElementPartiallyInViewport(projectsSection)) {
+    } else if (appDomManipulations.isMoreThanHalfOfTheElementInViewport(projectsSection)) {
       setGoTo('#contact')
     } else {
       setGoTo('')
     }
   });
 
-  function isElementPartiallyInViewport(element: HTMLElement) {
-    var rect = element.getBoundingClientRect();
-    const midPoint = rect.height / 2;
-    return (
-      rect.bottom > 0
-      && rect.bottom > midPoint
-    );
-  }
-
-  const onClickPageBody = () => {} 
+  const onClickOverlay = () => {
+    appDomManipulations.toggleMenu()
+  } 
 
   return (
     loading
@@ -65,7 +58,7 @@ function App() {
       <Projects id="projects" />
       <Contact id="contact" />
       <Menu id="menu" />
-      <div id="overlay" onClick={onClickPageBody} />
+      <div id="overlay" onClick={onClickOverlay} />
     </div>
   );
 }
