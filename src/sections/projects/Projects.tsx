@@ -7,7 +7,7 @@ type Props = {
 
 export default function Projects({ id }: Props) {
   return (
-    <section className='container' id="projects">
+    <section className='container' id={id}>
       <h1 className='title'>Projects</h1>
       <h3 className='subtitle'>Things I've built so far</h3>
       <div className='project-list'>

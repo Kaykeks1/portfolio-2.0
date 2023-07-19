@@ -19,7 +19,7 @@ type Props = {
 export default function Stacks({ id }: Props) {
   const stacks = [HTMLLogo, CSSLogo, JSLogo, ReactLogo, TailwindLogo, SASSLogo, GitLogo, VSCodeLogo, GithubLogo, VueLogo, NestJSLogo, PythonLogo]
   return (
-    <section id="stacks" className='container'>
+    <section id={id} className='container'>
       <h1 className='title'>My Tech Stack</h1>
       <h3 className='subtitle'>Technologies I’ve been working with recently</h3>
       <div className='stacks'>
