@@ -44,7 +44,7 @@ export default function SplashScreen({ finishedLoading }: Props) {
   return (
     <div className="splash-screen">
       {/* <h1 data-value="WELCOME">WELCOME</h1> */}
-      <h1 data-value="WELCOME"></h1>
+      <h1 data-value="WELCOME"> </h1>
     </div>
   )
 }
