@@ -12,7 +12,7 @@
   padding: 100px 0px;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
-  transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
+  transition: width 0.5s ease, padding 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,6 +26,33 @@
 
 .menu ul {
   display: none;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.menu ul li {
+  margin-bottom: 15%;
+  text-align: center;
+  position: relative;
+}
+
+.menu ul li a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #862121;
+  bottom: -10px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.menu ul li a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .menu .info-links {
@@ -55,7 +82,7 @@
 }
 
 .open-menu .info-link > svg > path {
-  fill: white;
+  fill: #A7A7A7;
 }
 
 .open-menu .info-link > svg {
@@ -66,20 +93,46 @@
 
 .open-menu .info-link > span {
   font-size: 0px;
-  transition: font-size 0.5s ease-in-out;
+  transition: font-size 0.3s ease;
   position: absolute;
-  left: 25%;
   bottom: -40px;
 }
 
 .open-menu .info-link > svg > path {
-  transition: fill 0.5s ease-in-out;
-}
-
-.open-menu .info-link:hover svg > path {
-  fill: #843939;
+  transition: fill 0.3s ease;
 }
 
 .open-menu .info-link:hover span {
   font-size: 15px;
+}
+
+.open-menu .info-link:hover .twitter > path {
+  fill: #23AAEC;
+}
+
+.open-menu .info-link:hover .linkedin g {
+  fill: #167EBB;
+}
+.open-menu .info-link:hover .gmail > path {
+  fill: #E75A4D;
+}
+
+.open-menu .info-link:hover .github > path {
+  fill: #FFFFFF;
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+  }
+  .open-menu {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    font-size: 30px;
+  }
 }

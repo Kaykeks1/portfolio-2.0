@@ -1,5 +1,8 @@
 import "./Menu.css"
-import { ReactComponent as TwitterLogo } from '../../images/svgs/twitter.svg';
+import { ReactComponent as TwitterLogo } from '../../images/svgs/twitter_link.svg';
+import { ReactComponent as GithubLogo } from '../../images/svgs/github_link.svg';
+import { ReactComponent as LinkedInLogo } from '../../images/svgs/linkedin_link.svg';
+import { ReactComponent as GmailLogo } from '../../images/svgs/gmail_link.svg';
 
 type Props = {
   id: string
@@ -8,16 +11,16 @@ type Props = {
 export default function Menu({ id }: Props) {
   const infoLinks = [
     { logo: TwitterLogo, label: 'Twitter' },
-    { logo: TwitterLogo, label: 'LinkedIn' },
-    { logo: TwitterLogo, label: 'Github' },
-    { logo: TwitterLogo, label: 'Gmail' },
+    { logo: GmailLogo, label: 'Gmail' },
+    { logo: LinkedInLogo, label: 'LinkedIn' },
+    { logo: GithubLogo, label: 'Github' },
   ];
   return (
     <div className='menu' id={id}>
       <ul className='menu-items'>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Resume</li>
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#project">PROJECTS</a></li>
+        <li><a href="#">RESUME</a></li>
       </ul>
 
       <div className='info-links'>
@@ -26,7 +29,7 @@ export default function Menu({ id }: Props) {
             const Logo = item.logo;
             return (
               <a className='info-link' key={key}>
-                <Logo />
+                <Logo className={item.label.toLowerCase()} />
                 <span>{item.label}</span>
               </a>
             )}
