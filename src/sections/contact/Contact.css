@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 100vh;
   height: 100%;
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
 }
 .title {
   color: #CCC;
@@ -13,4 +13,87 @@
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
+}
+.contact-mail {
+  color: #CCC;
+  font-size: 48px;
+  flex: 1;
+  padding-top: 20%;
+}
+
+.contact-mail a {
+  color: #862121;
+  margin-top: 20px;
+}
+
+.socials {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.socials .socials-link {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.socials .socials-link > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.socials .socials-link > svg > path {
+  fill: #A7A7A7;
+}
+
+.socials .socials-link > p {
+  color: #A7A7A7;
+  margin-left: 15px;
+}
+
+.socials .socials-link:hover .twitter > path {
+  fill: #23AAEC;
+}
+
+.socials .socials-link:hover .twitter ~ p {
+  color: #23AAEC;
+}
+
+.socials .socials-link:hover .linkedin g {
+  fill: #167EBB;
+}
+
+.socials .socials-link:hover .linkedin ~ p {
+  color: #167EBB;
+}
+
+.socials .socials-link:hover .gmail > path {
+  fill: #E75A4D;
+}
+
+.socials .socials-link:hover .gmail ~ p {
+  color: #E75A4D;
+}
+
+.socials .socials-link:hover .github > path {
+  fill: #FFFFFF;
+}
+
+.socials .socials-link:hover .github ~ p {
+  color: #FFFFFF;
+}
+
+.credits {
+  border-top: 1px solid #CCC;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 30px;
+  color: #CCC;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.credits span {
+  color: #862121;
 }
