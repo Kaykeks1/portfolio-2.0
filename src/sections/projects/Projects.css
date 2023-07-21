@@ -95,6 +95,7 @@
   color: rgb(213, 213, 213);
   font-size: calc(0.875em + 0.9px);
   margin: 10px 0;
+  text-align: left;
 }
 
 .project-stacks {
