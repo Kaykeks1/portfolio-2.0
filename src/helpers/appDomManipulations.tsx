@@ -4,7 +4,13 @@ const toggleMenu = () => {
   const menu = document.getElementById('menu') as HTMLElement;
   menu.classList.toggle('open-menu');
   let overlayShadow = document.getElementById("overlay") as HTMLElement;
-  overlayShadow.style.display = overlayShadow.style.display === "block" ? "none" : "block";
+  if (overlayShadow.style.opacity === "1") {
+    overlayShadow.style.opacity = "0";
+    overlayShadow.style.zIndex = "-1";
+  } else {
+    overlayShadow.style.opacity = "1";
+    overlayShadow.style.zIndex = "1";
+  }
 }
 
 const heroAnimation = () => {
