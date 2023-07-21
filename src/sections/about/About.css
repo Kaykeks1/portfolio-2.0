@@ -14,6 +14,15 @@
   font-style: normal;
   font-weight: 700;
 }
+
+.subtext {
+  color: #A7A7A7;
+  font-size: 18px;
+  font-style: normal;
+  margin: 0 20px;
+  margin-top: 10px;
+}
+
 .subtitle {
   /* color: var(--light-content, #A7A7A7); */
   color: #A7A7A7;
@@ -21,7 +30,7 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .timeline {
@@ -86,24 +95,40 @@
   left: -9px;
 }
 
-.period {
+.period, .summary, .position, .company {
   color: #A7A7A7;
-  font-size: 16px;
   font-style: normal;
-  font-weight: 100;
   margin: 0 20px;
+}
+
+.period {
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .summary {
-  color: #A7A7A7;
-  font-size: 12px;
-  font-style: normal;
-  margin: 0 20px;
+  font-size: 13px;
   margin-top: 10px;
-
 }
 
-@media (max-width: 800px) {
+.position {
+  font-size: 18px;
+  color: #862121;
+}
+
+.company {
+  font-size: 11px;
+  display: inline-flex;
+}
+
+.office-icon {
+  height: 14px;
+  width: 14px;
+  margin-left: 10px;
+  fill: #A7A7A7;
+}
+
+@media (max-width: 1000px) {
   .timeline::after {
     margin: unset;
     left: 0;
