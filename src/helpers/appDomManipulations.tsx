@@ -74,4 +74,6 @@ function isMoreThanHalfOfTheElementInViewport(element: HTMLElement) {
   );
 }
 
-export default { toggleMenu, heroAnimation, isMoreThanHalfOfTheElementInViewport }
+const helpers = { toggleMenu, heroAnimation, isMoreThanHalfOfTheElementInViewport }
+
+export default helpers;

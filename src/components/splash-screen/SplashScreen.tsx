@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import './SplashScreen.css';
-import { type } from 'os';
 
 type Props = {
   finishedLoading: Function
@@ -41,7 +40,7 @@ export default function SplashScreen({ finishedLoading }: Props) {
       
       iteration += 1 / 5;
     }, 50);
-  }, [])
+  })
   return (
     <div className="splash-screen">
       {/* <h1 data-value="WELCOME">WELCOME</h1> */}

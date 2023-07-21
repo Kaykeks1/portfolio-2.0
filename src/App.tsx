@@ -8,7 +8,7 @@ import Stacks from './sections/stacks/Stacks';
 import Projects from './sections/projects/Projects';
 import About from './sections/about/About';
 import Contact from './sections/contact/Contact';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import appDomManipulations from './helpers/appDomManipulations'
 
 function App() {

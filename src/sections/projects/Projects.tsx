@@ -1,5 +1,4 @@
 import './Projects.css';
-import backgroundImage from "../../images/me_1.jpeg";
 import libsys from '../../images/portfolio/libsys.png';
 import arvo from '../../images/portfolio/arvo.png';
 import summation from '../../images/portfolio/summation.png';

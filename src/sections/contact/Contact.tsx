@@ -26,7 +26,7 @@ export default function Contact({ id }: Props) {
           infoLinks.map((item, key) => {
             const Logo = item.logo;
             return (
-              <a className="socials-link" key={key}>
+              <a className="socials-link" key={key} href="#project">
                 <Logo className={item.label.toLowerCase()} />
                 <p>
                   {item.label}

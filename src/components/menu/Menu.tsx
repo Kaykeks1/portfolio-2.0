@@ -20,7 +20,7 @@ export default function Menu({ id }: Props) {
       <ul className='menu-items'>
         <li><a href="#hero">HOME</a></li>
         <li><a href="#project">PROJECTS</a></li>
-        <li><a href="#">RESUME</a></li>
+        <li><a href="#project">RESUME</a></li>
       </ul>
 
       <div className='info-links'>
@@ -28,7 +28,7 @@ export default function Menu({ id }: Props) {
           infoLinks.map((item, key) => {
             const Logo = item.logo;
             return (
-              <a className='info-link' key={key}>
+              <a className='info-link' href="#project" key={key}>
                 <Logo className={item.label.toLowerCase()} />
                 <span>{item.label}</span>
               </a>
