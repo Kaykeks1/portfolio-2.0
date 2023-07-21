@@ -40,6 +40,13 @@
   position: fixed;
 }
 
+.open .hamburger-top,
+.open .hamburger-middle,
+.open .hamburger-bottom {
+  background: #862121;
+  border-radius: 50px;
+}
+
 .open .hamburger-top {
   transform: rotate(45deg) translateY(6px) translate(6px);
 }
@@ -50,4 +57,25 @@
 
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    width: 25px;
+  }
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    width: 25px;
+    height: 2px;
+  }
+
+  .hamburger-middle {
+    transform: translateY(6px);
+  }
+  
+  .hamburger-bottom {
+    transform: translateY(12px);
+  }
 }
