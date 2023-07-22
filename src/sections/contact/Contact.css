@@ -97,3 +97,29 @@
 .credits span {
   color: #862121;
 }
+
+@media (max-width: 700px) {
+  .contact-mail {
+    font-size: 24px;
+    margin-top: 100px;
+
+  }
+  .socials .socials-link > svg {
+    width: 10px;
+    height: 10px;
+  }
+  .socials .socials-link > p {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-mail {
+    font-size: 18px;
+    margin-top: 120px;
+  }  
+  .socials {
+    flex-wrap: wrap;
+  }
+}
